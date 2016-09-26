@@ -308,6 +308,8 @@ class Parser {
                     //get the included template
                     if (strpos($matches[1], '$') !== false) {
                         $includeTemplate = "'$actualFolder'." . $this->varReplace($matches[1], $loopLevel);
+                    } else if(strpos($matches[1], '/') === 0) {
+                        $includeTemplate = $this->varReplace(substr($matches[1], 1), $loopLevel);
                     } else {
                         $includeTemplate = $actualFolder . $this->varReplace($matches[1], $loopLevel);
                     }
