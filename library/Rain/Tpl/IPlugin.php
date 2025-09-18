@@ -1,4 +1,7 @@
 <?php
+
+//@phpcs:ignoreFile Generic.NamingConventions.InterfaceNameSuffix.Missing
+
 namespace Rain\Tpl;
 
 /**
@@ -18,20 +21,22 @@ namespace Rain\Tpl;
  *
  * Method can modify some properties. No return value is expected.
  */
-interface IPlugin
-{
-    /**
-     * Returns a list of hooks that are implemented by the plugin.
-     * This should be an array containing:
-     * - a key/value pair where key is hook name and value is implementing method,
-     * - a value only when hook has same name as method.
-     */
-    public function declareHooks();
+interface IPlugin {
 
-    /**
-     * Sets plugin options.
-     *
-     * @var array
-     */
-    public function setOptions($options);
+
+	/**
+	 * Returns a list of hooks that are implemented by the plugin.
+	 * This should be an array containing:
+	 * - a key/value pair where key is hook name and value is implementing method,
+	 * - a value only when hook has same name as method.
+	 */
+	public function declareHooks();
+
+
+	/**
+	 * Sets plugin options.
+	 */
+	public function setOptions($options);
+
+
 }

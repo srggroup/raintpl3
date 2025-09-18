@@ -7,6 +7,7 @@ namespace Rain\Tpl;
  */
 class NotFoundException extends Exception {
 
+
 }
 
 
